@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "paneldecontrolopenclaw"
+version = "0.1.0"
+description = "Panel de Control para OpenClaw - Proxy local y monitor de IA"
+readme = "README.md"
+authors = [ { name = "OpenClaw Dev", email = "dev@example.com" } ]
+license = { file = "LICENSE" }
+dependencies = [
+    "requests>=2.26",
+    "PySide6>=6.5",
+    "cryptography>=3.4",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+]
+
+[project.urls]
+Homepage = "https://github.com/tu-usuario/paneldecontrolopenclaw"
+
+[project.scripts]
+paneldecontrolopenclaw = "paneldecontrolopenclaw.main:main"
+paneldecontrolopenclaw-proxy = "paneldecontrolopenclaw.proxy_runner:main"

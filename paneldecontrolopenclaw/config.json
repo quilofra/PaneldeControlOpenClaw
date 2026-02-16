@@ -1,0 +1,56 @@
+{
+  "providers": {
+    "openai": {
+      "base_url": "https://api.openai.com",
+      "api_key": "",
+      "api_key_header": "Authorization",
+      "api_key_prefix": "Bearer "
+    },
+    "anthropic": {
+      "base_url": "https://api.anthropic.com",
+      "api_key": "",
+      "api_key_header": "x-api-key",
+      "api_key_prefix": ""
+    },
+    "gemini": {
+      "base_url": "https://generativelanguage.googleapis.com",
+      "api_key": "",
+      "api_key_header": "X-Goog-Api-Key",
+      "api_key_prefix": ""
+    }
+  },
+  "provider": "openai",
+  "model": "gpt-3.5-turbo",
+  "allowed_commands": [
+    "systemctl",
+    "journalctl",
+    "apt",
+    "apt-get",
+    "dpkg",
+    "ip",
+    "ss",
+    "ping",
+    "curl",
+    "wget",
+    "dig",
+    "nslookup",
+    "ls",
+    "cat",
+    "tail",
+    "grep",
+    "find",
+    "du",
+    "df",
+    "git",
+    "docker",
+    "docker-compose"
+  ],
+  "allow_sudo": false,
+  "max_log_size_mb": 1024,
+  "log_compress_days": 7,
+  "log_dir": "logs",
+  "database": "runs.db",
+  "proxy_port": 5005,
+  "theme": "dark",
+  "icon_variant": "full"
+}

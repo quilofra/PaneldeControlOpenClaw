@@ -1,0 +1,19 @@
+# Systemd service file for PaneldeControlOpenClaw proxy
+
+[Unit]
+Description=Panel de Control OpenClaw Proxy Service
+After=network.target
+
+[Service]
+Type=simple
+# Replace USER_PLACEHOLDER with the user that should run the proxy
+User=USER_PLACEHOLDER
+# Working directory should point to the installation location of this project
+WorkingDirectory=/opt/paneldecontrolopenclaw
+ExecStart=/usr/bin/env python3 /opt/paneldecontrolopenclaw/proxy_runner.py
+# Always restart the proxy; this ensures it stays up
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
